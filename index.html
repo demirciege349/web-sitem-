@@ -58,7 +58,9 @@ svg{display:block}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
 .nav a:hover::after{transform:scaleX(1);transform-origin:left}
 .prog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left}
-@media (max-width:900px){.nav{display:none}.top-in .btn{margin-left:auto}}
+.mob-cta{display:none;align-items:center;gap:6px;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:99px;font-size:.85rem;font-weight:500;text-decoration:none;margin-left:auto}
+.mob-cta svg{width:16px;height:16px}
+@media (max-width:900px){.nav{display:none}.mob-cta{display:inline-flex}}
 
 /* ---------- butonlar ---------- */
 .btns{display:flex;flex-wrap:wrap;gap:12px}
@@ -766,6 +768,7 @@ footer .logo{color:var(--paper)}
       <a href="#sss">Sorular</a>
       <a href="#iletisim">İletişim</a>
     </nav>
+    <a class="mob-cta" href="https://wa.me/905443036441" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
   </div>
   <div class="prog" id="prog" aria-hidden="true"></div>
 </header>
