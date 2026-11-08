@@ -1052,7 +1052,7 @@ footer .logo{color:var(--paper)}
 <header class="top" id="top">
   <div class="wrap top-in">
     <a class="logo" href="#ust" aria-label="Mars Zeka, başa dön"><svg aria-hidden="true"><use href="#qr"/></svg>Mars Zeka</a>
-    <nav class="nav" id="nav" aria-label="Sayfa">
+    <nav class="nav" id="nav" data-lenis-prevent aria-label="Sayfa">
       <a href="#neden">Neden</a>
       <a href="#nasil">Nasıl çalışır</a>
       <a href="#ekranlar">Ekranlar</a>
@@ -1633,7 +1633,7 @@ footer .logo{color:var(--paper)}
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<div class="tour" id="tour" hidden role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+<div class="tour" id="tour" hidden data-lenis-prevent role="dialog" aria-modal="true" aria-labelledby="demoTitle">
   <div class="tour-bg"></div>
   <div class="demo" id="demo">
     <header class="d-top">
@@ -1675,7 +1675,7 @@ footer .logo{color:var(--paper)}
 
   /* ---------- yumuşak kaydırma ---------- */
   var lenis = null;
-  if (!reduce && typeof window.Lenis === "function" && window.matchMedia("(any-pointer: fine)").matches){
+  if (!reduce && typeof window.Lenis === "function" && window.matchMedia("(hover: hover) and (pointer: fine)").matches){
     try {
       lenis = new window.Lenis({ duration: 1.1, smoothWheel: true });
       var lraf = function(t){ lenis.raf(t); requestAnimationFrame(lraf); };
